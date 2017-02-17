@@ -1,0 +1,218 @@
+/*detailpage*/
+.detail{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 2%;
+}
+.small-flex-item{
+  width: 50%;
+}
+.small-flex-item label{
+
+}
+.large-flex-item{
+  width: 100%;
+}
+.name_prize{
+  display: flex;
+  justify-content: space-between;
+  margin-top: -5%;
+}
+.name_prize h2{
+  margin: 0;
+}
+.size_amount{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+.size_amount label {
+  display:block;
+}
+.size_amount input{
+  display: flex;
+  padding: 7px;
+}
+#size{
+  width: 50%;
+
+}
+.small-flex-item button{
+  background: #f55139;
+  border: 0;
+  width: 15%;
+  color: white;
+  height: 50px;
+  position: absolute;
+  margin-top: 1%;
+  right: 10%;
+}
+
+/*//DetailPageSlider*/
+  .slider{
+    width: 95%;
+    position: relative;
+    padding-top: 350px;
+    border: solid gray 1px;
+  }
+
+.slider>img{
+  position: absolute;
+  left: 0; top: 0; bottom: 0; right: 0;
+  margin: auto;
+  transition: all 0.5s;
+}
+
+.slider input[name='slide_switch'] {
+  display: none;
+}
+
+.slider label {
+  margin: 18px 0 0 18px;
+  border: 1px solid gray;
+
+  float: left;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /*Default style = low opacity*/
+  opacity: 0.6;
+}
+
+.slider label img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider input[name='slide_switch']:checked+label {
+  border: 1px solid #f55139;
+  opacity: 1;
+}
+.slider input[name='slide_switch'] ~ img {
+  opacity: 0;
+  transform: scale(1);
+}
+
+.slider input[name='slide_switch']:checked+label+img {
+  opacity: 1;
+}
+/*Fun begins*/
+.tab_container {
+  margin: 0 auto;
+  padding-top: 70px;
+  position: relative;
+  color: #757575;
+}
+.tab_container p{
+  color: #757575;
+}
+input, section {
+  clear: both;
+  padding-top: 10px;
+  display: none;
+}
+.slider label{
+  margin-right: 2px;
+  margin-left: 2px;
+  border-radius: 0;
+  background: white;
+  width: 30%;
+}
+
+.tab_container label {
+  font-weight: 700;
+  font-size: 18px;
+  display: block;
+  float: left;
+  width: 20%;
+  padding: 1.5em;
+  color: #757575;
+  cursor: pointer;
+  text-decoration: none;
+  background: #f0f0f0;
+  margin-right: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 1px solid #cccccc;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3{
+  display: block;
+  padding: 20px;
+  background: #fff;
+  color: #999;
+  border-top: 1px solid #cccccc;
+  margin-left: -13%;
+  margin-right: -13%;
+}
+
+.tab_container .tab-content p,
+.tab_container .tab-content h3 {
+  -webkit-animation: fadeInScale 0.7s ease-in-out;
+  -moz-animation: fadeInScale 0.7s ease-in-out;
+  animation: fadeInScale 0.7s ease-in-out;
+}
+.tab_container .tab-content h3  {
+  text-align: center;
+}
+
+.tab_container [id^="tab"]:checked + label {
+  background: #fff;
+  box-shadow: inset 0 10px #f45a40;
+  border-bottom: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/*Media query*/
+@media only screen and (max-width: 930px) {
+  .tab_container label span {
+    font-size: 14px;
+  }
+  .tab_container label .fa {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .tab_container label span {
+    display: none;
+  }
+
+label .fa {
+    font-size: 16px;
+  }
+
+  .tab_container {
+    width: 98%;
+  }
+}
+@media screen and(min-width: 401px){
+  .detailmobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .small-flex-item{
+    width: 110%;
+  }
+  .size_amount input{
+    width: 20%;
+  }
+  .tab_container label{
+    width: 18%;
+    font-weight: 600;
+    font-size: 10px;
+  }
+  .tab_container label span{
+    display: block;
+  }
+}

@@ -1,0 +1,96 @@
+<site-slider></site-slider>
+<div class="content" *ngFor="let shoes of shoes" [class.featured]="shoes.isfeatured">
+  <div class="frontcategoris">
+    <div class="item">
+      <img [src]="shoes.image" alt={{shoes.name}} width="100%"/>
+      <div class="inner">
+      <a [routerLink]="['/shoes', shoes.id]" ><h4>FOOTBALL SHOES</h4></a>
+        {{shoes.description}}
+      </div>
+    </div>
+    <div class="item">
+      <img [src]="shoes.image" alt={{shoes.name}} width="100%"/>
+      <div class="inner">
+        <a [routerLink]="['/shoes', shoes.id]" ><h4>MODERN CLOTHERS</h4></a>
+        {{shoes.description}}
+      </div>
+    </div>
+    <div class="item">
+      <img [src]="shoes.image" alt={{shoes.name}} width="100%"/>
+      <div class="inner">
+        <a [routerLink]="['/shoes', shoes.id]" ><h4>BAG & ACCESSORIES</h4></a>
+        {{shoes.description}}
+      </div>
+    </div>
+    </div>
+  <div class="contenth1"><h1>POPULAR PRODUCT</h1></div>
+  <div class="popular_product">
+    <div class="item">
+    <star-rating>rating[rating]="shoes.StarRatingComponent"(ratingClicked)=>"onRating($event)"</star-rating>
+    <img [src]="shoes.image" alt={{shoes.name}} width="100%"/><div class="inner">
+    <a [routerLink]="['/shoes', shoes.id]" >
+      <h4>{{shoes.name}}</h4>{{shoes.description}}</a>
+      <span><p>{{shoes.prize}}</p></span>
+  </div>
+    <button>BUY NOW</button></div>
+    <div class="item">
+      <star-rating>rating[rating]="shoes.StarRatingComponent"(ratingClicked)=>"onRating($event)"</star-rating>
+      <img [src]="shoes.image" alt={{shoes.name}} width="100%"/><div class="inner">
+      <a [routerLink]="['/shoes', shoes.id]" >
+        <h4>{{shoes.name}}</h4>{{shoes.description}}</a>
+      <span><p>{{shoes.prize}}</p></span>
+    </div>
+      <button>BUY NOW</button></div>
+    <div class="item">
+      <star-rating>rating[rating]="shoes.StarRatingComponent"(ratingClicked)=>"onRating($event)"</star-rating>
+      <img [src]="shoes.image" alt={{shoes.name}} width="100%"/><div class="inner">
+      <a [routerLink]="['/shoes', shoes.id]" >
+        <h4>{{shoes.name}}</h4>{{shoes.description}}</a>
+      <span><p>{{shoes.prize}}</p></span>
+    </div>
+      <button>BUY NOW</button></div>
+    <div class="item">
+      <star-rating>rating[rating]="shoes.StarRatingComponent"(ratingClicked)=>"onRating($event)"</star-rating>
+      <img [src]="shoes.image" alt={{shoes.name}} width="100%"/><div class="inner">
+      <a [routerLink]="['/shoes', shoes.id]" >
+        <h4>{{shoes.name}}</h4>{{shoes.description}}</a>
+      <span><p>{{shoes.prize}}</p></span>
+    </div>
+      <button>BUY NOW</button></div>
+    <div class="item">
+      <star-rating>rating[rating]="shoes.StarRatingComponent"(ratingClicked)=>"onRating($event)"</star-rating>
+      <img [src]="shoes.image" alt={{shoes.name}} width="100%"/><div class="inner">
+      <a [routerLink]="['/shoes', shoes.id]" >
+        <h4>{{shoes.name}}</h4>{{shoes.description}}</a>
+      <span><p>{{shoes.prize}}</p></span>
+    </div>
+      <button>BUY NOW</button></div>
+    <div class="item">
+      <star-rating>rating[rating]="shoes.StarRatingComponent"(ratingClicked)=>"onRating($event)"</star-rating>
+      <img [src]="shoes.image" alt={{shoes.name}} width="100%"/><div class="inner">
+      <a [routerLink]="['/shoes', shoes.id]" >
+        <h4>{{shoes.name}}</h4>{{shoes.description}}</a>
+      <span><p>{{shoes.prize}}</p></span>
+    </div>
+      <button>BUY NOW</button></div>
+    <div class="item">
+      <star-rating>rating[rating]="shoes.StarRatingComponent"(ratingClicked)=>"onRating($event)"</star-rating>
+      <img [src]="shoes.image" alt={{shoes.name}} width="100%"/><div class="inner">
+      <a [routerLink]="['/shoes', shoes.id]" >
+        <h4>{{shoes.name}}</h4>{{shoes.description}}</a>
+      <span><p>{{shoes.prize}}</p></span>
+    </div>
+      <button>BUY NOW</button></div>
+    <div class="item">
+      <star-rating>rating[rating]="shoes.StarRatingComponent"(ratingClicked)=>"onRating($event)"</star-rating>
+      <img [src]="shoes.image" alt={{shoes.name}} width="100%"/><div class="inner">
+      <a [routerLink]="['/shoes', shoes.id]" >
+        <h4>{{shoes.name}}</h4>
+        {{shoes.description}}</a>
+      <span><p>{{shoes.prize}}</p></span>
+    </div>
+      <button>BUY NOW</button>
+    </div>
+  </div>
+
+</div>

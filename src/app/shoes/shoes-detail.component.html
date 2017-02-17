@@ -1,0 +1,85 @@
+<div class="content">
+    <div class="detail">
+      <div class="detailmobile"><h2>{{shoes.name}}</h2></div>
+      <div class="small-flex-item">
+        <div class="slider">
+          <input type="radio" name="slide_switch" id="id1"/>
+            <label for="id1">
+              <img src="app/assets/shoes-1.jpg" width="100"/>
+            </label>
+          <img src="app/assets/shoes-1.jpg" width="70%"/>
+
+          <input type="radio" name="slide_switch" id="id2" checked="checked"/>
+          <label for="id2">
+            <img src="app/assets/shoes-2.jpg" width="100"/>
+          </label>
+          <img src="app/assets/shoes-2.jpg" width="70%"/>
+
+          <input type="radio" name="slide_switch" id="id3"/>
+          <label for="id3">
+            <img src="app/assets/shoes-3.jpg" width="100"/>
+          </label>
+          <img src="app/assets/shoes-3.jpg" width="70%"/>
+        </div>
+      </div>
+      <div class="small-flex-item">
+        <h2 class="detaildesktop">{{shoes.name}}</h2>
+        <div class="name_prize">
+          <h1>{{shoes.brand}}</h1>
+          <div class="brand"></div>
+          <div class="prize">
+            <h1>{{shoes.prize}}</h1>
+            <h2>$ 100</h2>
+            <h2>You save 50%</h2>
+          </div>
+        </div>
+        <div class="size_amount">
+          <label for="size">Size</label>
+          <input id="size" type="text" placeholder="EU 45 Black">
+          <label for="amount">Amount</label>
+          <input id="amount" type="number" placeholder="1">
+        </div>
+        <div class="inner">
+          <button>BUY NOW</button>
+        </div>
+      </div>
+      <div class="large-flex-item">
+        <div class="wrapper">
+          <div class="tab_container">
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1"><span>Description</span></label>
+
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2"><span>Shipping</span></label>
+
+            <input id="tab3" type="radio" name="tabs">
+            <label for="tab3"><span>Sizing</span></label>
+
+            <section id="content1" class="tab-content">
+              <div class="inner">
+
+                <p>{{shoes.description}}</p>
+
+              </div>
+
+            </section>
+
+            <section id="content2" class="tab-content">
+              <div class="inner">
+
+                <p>{{shoes.shipping}}</p>
+
+              </div>
+            </section>
+
+            <section id="content3" class="tab-content">
+              <div class="inner">
+
+                <p>{{shoes.sizing}}</p>
+
+              </div>
+            </section>
+          </div>
+      </div>
+    </div>
+</div>

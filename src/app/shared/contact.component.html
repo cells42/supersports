@@ -1,0 +1,55 @@
+<div [hidden]="hasBeenSubmitted">
+  <div class="contact">
+    <div class="inner">
+      <h1>Contact Us</h1>
+      <form name="myForm" (ngSubmit)="register(contactForm, $event)" #contactForm="ngForm" novalidate>
+        <div>
+          <label for="contactname">Name:</label>
+          <input type="text" id="contactname" name="xyz" [(ngModel)]="model.contactname" placeholder="YOU NAME..." maxlength="30" required/>
+        </div>
+        <div>
+          <label for="contactemail">Email:</label>
+          <input type="email" id="contactemail" name="email" [(ngModel)]="model.contactemail"  placeholder="YOU E-MAIL..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+        </div>
+        <div>
+          <label for="contactmessage">Message:</label><br>
+          <textarea id="contactmessage" name="contactmessage" [(ngModel)]="model.contactmessage" placeholder="YOU TEXT..."  required></textarea>
+        </div>
+        <button class="formsubmit" type="submit">SEND MESSAGE</button>
+      </form>
+      <div class="flex-last-mobile">
+        <div class="left">
+          <ul>
+            <li><H3>SUPPORT</H3></li>
+            <li><a [routerLink]="['home']">Terms & Conditions</a></li>
+            <li><a [routerLink]="['home']">FAQ</a></li>
+            <li><a [routerLink]="['home']">Payment</a></li>
+            <li><a [routerLink]="['home']">Refunds</a></li>
+            <li><a [routerLink]="['home']">Track Order</a></li>
+            <li><a [routerLink]="['home']">Services</a></li>
+            <li><a [routerLink]="['home']">Privacy & Security</a></li>
+            <li><a [routerLink]="['home']">Careers</a></li>
+            <li><a [routerLink]="['home']">Press</a></li>
+            <li><a [routerLink]="['home']">Coporate Information</a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a [routerLink]="['home']">Sizing</a></li>
+            <li><a [routerLink]="['home']">Ordering</a></li>
+            <li><a [routerLink]="['home']">Shipping</a></li>
+            <li><a [routerLink]="['home']">Return Policy</a></li>
+            <li><a [routerLink]="['home']">Affiliates</a></li>
+            <li><a [routerLink]="['home']">Find A Store</a></li>
+            <li><a [routerLink]="['home']">Site Map</a></li>
+            <li><a [routerLink]="['home']">Sign Up & Save</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+   </div>
+<div class="inner">
+  <div [hidden]="!hasBeenSubmitted">You have submitted. you name is {{model.contactname}}.you email is {{model.contactemail}} you message {{model.contactmessage}} {{model.hasBeenSubmitted}} </div>
+</div>
