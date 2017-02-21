@@ -9,23 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Contactform = (function () {
-    function Contactform() {
+var Contact = (function () {
+    function Contact() {
     }
-    return Contactform;
+    return Contact;
 }());
 var ContactComponent = (function () {
     function ContactComponent() {
-        this.model = new Contactform();
+        this.model = new Contact();
     }
     ContactComponent.prototype.ngOnInit = function () {
-        this.hasBeenSubmitted = false;
     };
     ContactComponent.prototype.register = function (form, event) {
-        // .....
         event.preventDefault();
         this.hasBeenSubmitted = true;
-        console.log(form.value.xyz);
     };
     ContactComponent = __decorate([
         core_1.Component({

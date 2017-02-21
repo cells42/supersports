@@ -2,14 +2,33 @@
   <div class="contact">
     <div class="inner">
       <h1>Contact Us</h1>
-      <form name="myForm" (ngSubmit)="register(contactForm, $event)" #contactForm="ngForm" novalidate>
+      <form (ngSubmit)="register(contactForm, $event)" #contactForm="ngForm">
         <div>
           <label for="contactname">Name:</label>
-          <input type="text" id="contactname" name="xyz" [(ngModel)]="model.contactname" placeholder="YOU NAME..." maxlength="30" required/>
+          <input type="text" id="contactname" name="contactname" required minlength="4" maxlength="24" [(ngModel)]="model.contactname" #contactname="ngModel"  placeholder="Your name"/>
+          <div *ngIf="contactname.errors && (contactname.dirty || contactname.touched)" class="alertname"><br>
+            <div [hidden]="!contactname.errors.required">
+              Name is required
+            </div>
+            <div [hidden]="!contactname.errors.minlength">
+              Name must be at least 4 characters long.
+            </div>
+            <div [hidden]="!contactname.errors.maxlength">
+              Name cannot be more than 24 characters long.
+            </div>
+          </div>
         </div>
         <div>
           <label for="contactemail">Email:</label>
-          <input type="email" id="contactemail" name="email" [(ngModel)]="model.contactemail"  placeholder="YOU E-MAIL..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+          <input type="email" id="contactemail" name="contactemail" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [(ngModel)]="model.contactemail" #contactemail="ngModel" placeholder="Your email" >
+          <div *ngIf="contactemail.errors && (contactemail.valid || contactemail.touched)" class="alertemail"><br>
+            <div [hidden]="!contactemail.errors.required">
+              Email is required
+            </div>
+            <div [hidden]="!contactemail.errors.pattern">
+              Please input a valid email.
+            </div>
+          </div>
         </div>
         <div>
           <label for="contactmessage">Message:</label><br>
